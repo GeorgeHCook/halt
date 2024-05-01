@@ -5,195 +5,191 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Professions menu</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0; /* light gray */
-        margin: 0;
-        padding: 0;
-    }
 
-
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .menu > .column1 {
-        flex: 1;
-        display: flex;
-        flex-flow: column wrap;
-        padding: 20px;
-        background-color: white;
-        border-right: 0px solid darkblue;
-        margin-top: 0px;
-        height: auto;
-        justify-content: space-between;
-
-    }
-
-    .menu > .column2 {
-        flex: 1;
-        display: flex;
-        flex-flow: column wrap;
-        padding: 20px;
-        padding-top: 80px;
-        background-color: #ffffff;
-        border: 0px solid #ccc;
-        margin-top: 50px;
-        max-height: 300px;
-
-
-    }
-    button {
-        border-width: 0px;
-      	background-color: transparent;
-        padding-block: 0px;
-        padding-inline: 0px;
-    }
-
-    .btn-2 {
-        background-color: green !important;
-        color: white;
-        padding: 12px 35px;
-        border: none;
-        cursor: pointer;
-        display: block;
-        transition: background-color 0.3s;
-        border-width: 0px!important;
-      	text-align: center;
-      	margin-left: 20px;
-
-
-
-    }
-
-    .btn-2:hover {
-    background-color: #45a049;
-    }
-    .btn-2:active {
-    background-color: #45a049;
-    }
-
-    .link > p {
-
-      margin: 15px 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid darkblue;
-
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    h3 {
-        color: rgb(0, 0, 0);
-    }
-
-	.link a {
-    color: black;
-    width: 100%;
-		}
-
-
-  #line1, #line2, #line3 {
-    margin: 0px 0;
-    padding-left: 80px;
-    background-image: url('https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg');
-    background-size: 60px 60px;
-    background-repeat: no-repeat;
-    background-position: left center;
-    visibility: visible;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    transition: 0.3s;
-    font-size: 20px;
-
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* light gray */
+    margin: 0;
+    padding: 0;
   }
-    #line1:hover, #line2:hover, #line3:hover {
-    background-image: url('https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6-09.jpg');
-}
+
+  .menu {
+    width: 100%;
+  }
+
+  .subnav-title {
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 20px;
+    padding-left: 50px;
+  }
+
+  .sectors {
+    /* flex: 1; */
+    display: flex;
+    flex-flow: row;
+    padding: 20px;
+    background-color: white;
+    margin-top: 0px;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .sector {
+    margin: 15px 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .prof-container {
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffffff;
+    margin: 0px;
+    height: auto;
+    padding: 100px;
+    /* justify-content: space-between; */
+  }
+
+  .professions {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: #ffffff;
+    max-height: 200px;
+  }
 
 
-    a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
+  .role {
+    margin: 15px;
     }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    color: rgb(0, 0, 0);
+  }
+
+  .role:hover {
+    text-decoration: underline;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    float: left;
+    border-radius: 20%;
+  }
+
+  button {
+    border-width: 0px;
+    background-color: transparent;
+    padding-block: 0px;
+    padding-inline: 0px;
+  }
+
+  .btn-2 {
+    background-color: green !important;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.3s;
+    border-width: 0px!important;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .btn-2:hover {
+  background-color: #f1f1f1;
+  }
+
+  /* #line1:hover, #line2:hover, #line3:hover {
+    background-image: url('https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6-09.jpg');
+  } */
+
+  a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
 
 </style>
 </head>
-<body data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1>
 
+<body>
 <div class="menu">
-
-    <div class="column1" id="linkedText1">
-        <h3>Our Expertise</h3>
-        <h4 id="line1">Allied Health</h4>
-        <h4 id="line2">Nursing</h4>
-        <h4 id="line3">Social Work</h4>
+  <div class="subnav-title"><h3>Our Expertise</h3></div>
+  <div class="sectors">
+      <div class="sector" id="line1">
+        <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
+        <h4>Allied Health</h4>
+      </div>
+      <div class="sector" id="line2">
+        <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
+        <h4>Nursing</h4>
+      </div>
+      <div class="sector" id="line3">
+        <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
+        <h4>Social work</h4>
+      </div>
+  </div>
+  <div class="prof-container">
+    <div class="professions" id="specialisations">
+        <div class="role"><p><a href="#">Specialisation 1</a></p></div>
+        <div class="role"><p><a href="#">Specialisation 2</a></p></div>
+        <div class="role"><p><a href="#">Specialisation 3</a></p></div>
+        <div class="role"><p><a href="#">Specialisation 4</a></p></div>
+        <div class="role"><p><a href="#">Specialisation 5</a></p></div>
+        <div class="role"><p><a href="#">Specialisation 6</a></p></div>
     </div>
-    <div class="column2" id="specialisations">
-        <div class="link"><p><a href="#">Specialisation 1</a></p></div>
-        <div class="link"><p><a href="#">Specialisation 2</a></p></div>
-        <div class="link"><p><a href="#">Specialisation 3</a></p></div>
-        <div class="link"><p><a href="#">Specialisation 4</a></p></div>
-        <div class="link"><p><a href="#">Specialisation 5</a></p></div>
-        <div class="link"><p><a href="#">Specialisation 6</a></p></div>
-        <div class="link"><p><a href="#">Specialisation 7</a></p></div>
-        <div class="link"><p><a href="#">Specialisation 8</a></p></div>
-        <div id="menu-btn-2"><button><a href="#" class="btn-2">Click me</a></button></div>
-    </div>
+    <div id="menu-btn-2"><button><a href="#" class="btn-2">Click me</a></button></div>
+  </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // Add event listeners to each line of text,
-    line1.addEventListener("mouseover", changeText);
-    line2.addEventListener("mouseover", changeText);
-    line3.addEventListener("mouseover", changeText);
+    // Add event listeners to each line of text
+    $("#line1, #line2, #line3").mouseover(changeText);
 
     // Function to change the content of the last three columns
     function changeText() {
-
-        // Change the content of the last three columns based on which line is hovered over
-        if (this.id === "line1") {
-        document.getElementById("specialisations").innerHTML =
-                    "<div class='link'><p><a href='#'>specialisation 1</a></p></div>" +
-                    "<div class='link'><p><a href='#'>specialisation 2</a></p></div>" +
-                    "<div class='link'><p><a href='#'>specialisation 3</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 4</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 5</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 6</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 7</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 8</a></p></div>" +
-                    "<div id='menu-btn-2'><button><a href='#' class='btn-2'>Click me</a></button></div>";
-        } else if (this.id === "line2") {
-            document.getElementById("specialisations").innerHTML =
-                    "<div class='link'><p><a href='#'>specialisation 11</a></p></div>" +
-                    "<div class='link'><p><a href='#'>specialisation 12</a></p></div>" +
-                    "<div class='link'><p><a href='#'>specialisation 13</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 14</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 15</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 16</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 17</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 18</a></p></div>" +
-                    "<div id='menu-btn-2'><button><a href='#' class='btn-2'>Click me</a></button></div>";
-        } else if (this.id === "line3") {
-            document.getElementById("specialisations").innerHTML =
-                    "<div class='link'><p><a href='#'>specialisation 21</a></p></div>" +
-                    "<div class='link'><p><a href='#'>specialisation 22</a></p></div>" +
-                    "<div class='link'><p><a href='#'>specialisation 23</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 24</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 25</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 26</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 27</a></p></div>" +
-                    "<div class='link'><p><a href='#'>Specialisation 28</a></p></div>" +
-                    "<div id='menu-btn-2'><button><a href='#' class='btn-2'>Click me</a></button></div>";
-        }
+      // Change the content of the last three columns based on which line is hovered over
+      if (this.id === "line1") {
+        $("#specialisations").html(
+          "<div class='role'><p><a href='#'>specialisation 1</a></p></div>" +
+          "<div class='role'><p><a href='#'>specialisation 2</a></p></div>" +
+          "<div class='role'><p><a href='#'>specialisation 3</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 4</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 5</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 6</a></p></div>"
+        );
+      } else if (this.id === "line2") {
+        $("#specialisations").html(
+          "<div class='role'><p><a href='#'>specialisation 11</a></p></div>" +
+          "<div class='role'><p><a href='#'>specialisation 12</a></p></div>" +
+          "<div class='role'><p><a href='#'>specialisation 13</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 14</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 15</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 16</a></p></div>"
+        );
+      } else if (this.id === "line3") {
+        $("#specialisations").html(
+          "<div class='role'><p><a href='#'>specialisation 21</a></p></div>" +
+          "<div class='role'><p><a href='#'>specialisation 22</a></p></div>" +
+          "<div class='role'><p><a href='#'>specialisation 23</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 24</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 25</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 26</a></p></div>"
+        );
+      }
     }
 </script>
-
 </body>
 </html>

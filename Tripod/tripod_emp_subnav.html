@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professions menu</title>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0; /* light gray */
+      margin: 0;
+      padding: 0;
+  }
+
+  .menu2 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+  }
+
+  .menu2 > .column3 {
+      flex: 1;
+      display: flex;
+      flex-flow: column wrap;
+      padding: 20px;
+      background-color: white;
+      border-right: 0px solid darkblue;
+      margin-top: 0px;
+      height: auto;
+      justify-content: space-between;
+
+  }
+
+  .menu2 > .column4 {
+      flex: 1;
+      display: flex;
+      flex-flow: column wrap;
+      padding: 20px;
+      padding-top: 80px;
+      background-color: #ffffff;
+      border: 0px solid #ccc;
+      margin-top: 50px;
+      max-height: 300px;
+  }
+
+  .link > p {
+    margin: 15px 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid darkblue;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  h3 {
+      color: rgb(0, 0, 0);
+  }
+
+  .link a {
+  color: black;
+  width: 100%;
+  }
+
+  #line1, #line2, #line3, #line4, #line5, #line6, #line7 {
+  margin: 0px 0;
+  padding-left: 80px;
+  background-image: url('https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg');
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  visibility: visible;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: 0.3s;
+  font-size: 20px;
+  }
+
+  #line1:hover, #line2:hover, #line3:hover, #line4:hover, #line5:hover, #line6:hover, #line7:hover {
+  background-image: url('https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6-09.jpg');
+  }
+
+  a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+  }
+
+</style>
+
+</head>
+
+<div class="menu2">
+  <div class="column3" id="linkedText1">
+      <h3>Our Expertise</h3>
+      <h4 id="line4">MSP</h4>
+      <h4 id="line5">RPO</h4>
+      <h4 id="line6">Perm</h4>
+    <h4 id="line7">Locum</h4>
+  </div>
+  <div class="column4" id="specialisations2">
+      <div class="link"><p><a href="#">Specialisation 01</a></p></div>
+      <div class="link"><p><a href="#">Specialisation 02</a></p></div>
+      <div class="link"><p><a href="#">Specialisation 03</a></p></div>
+      <div class="link"><p><a href="#">Specialisation 04</a></p></div>
+      <div class="link"><p><a href="#">Specialisation 05</a></p></div>
+      <div class="link"><p><a href="#">Specialisation 06</a></p></div>
+      <div class="link"><p><a href="#">Specialisation 07</a></p></div>
+      <div class="link"><p><a href="#">Specialisation 08</a></p></div>
+  </div>
+</div>
+
+<script>
+  // Add event listeners to each line of text,
+  line4.addEventListener("mouseover", changeText2);
+  line5.addEventListener("mouseover", changeText2);
+  line6.addEventListener("mouseover", changeText2);
+  line7.addEventListener("mouseover", changeText2);
+
+  // Function to change the content of the last three columns
+  function changeText2() {
+
+    // Change the content of the last three columns based on which line is hovered over
+    if (this.id === "line4") {
+        document.getElementById("specialisations2").innerHTML =
+                "<div class='link'><p><a href='#'>specialisation 1</a></p></div>" +
+                "<div class='link'><p><a href='#'>specialisation 2</a></p></div>" +
+                "<div class='link'><p><a href='#'>specialisation 3</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 4</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 5</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 6</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 7</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 8</a></p></div>"
+    } else if (this.id === "line5") {
+        document.getElementById("specialisations2").innerHTML =
+                "<div class='link'><p><a href='#'>specialisation 11</a></p></div>" +
+                "<div class='link'><p><a href='#'>specialisation 12</a></p></div>" +
+                "<div class='link'><p><a href='#'>specialisation 13</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 14</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 15</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 16</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 17</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 18</a></p></div>"
+    } else if (this.id === "line6") {
+        document.getElementById("specialisations2").innerHTML =
+                "<div class='link'><p><a href='#'>specialisation 21</a></p></div>" +
+                "<div class='link'><p><a href='#'>specialisation 22</a></p></div>" +
+                "<div class='link'><p><a href='#'>specialisation 23</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 24</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 25</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 26</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 27</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 28</a></p></div>"
+    } else if (this.id === "line7") {
+        document.getElementById("specialisations2").innerHTML =
+                "<div class='link'><p><a href='#'>specialisation 29</a></p></div>" +
+                "<div class='link'><p><a href='#'>specialisation 30</a></p></div>" +
+                "<div class='link'><p><a href='#'>specialisation 31</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 32</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 33</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 34</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 35</a></p></div>" +
+                "<div class='link'><p><a href='#'>Specialisation 36</a></p></div>"
+    }
+  }
+</script>
+
+</body>
+</html>

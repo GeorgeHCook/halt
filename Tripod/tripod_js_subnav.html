@@ -7,24 +7,30 @@
 <style>
 
    .container {
-    margin: 100px;
+    margin: 5%;
     font-family: 'Onest', sans-serif;
 		max-width: 100%;
   }
 
   .subnav-title {
-    background-color: #ffffff;
+    background-color: transparent;
     margin: 0px;
     margin-bottom: 15px;
-    font-size: 18px;
     font-weight: 400;
+  }
+
+  .menu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: transparent;
   }
 
   .sectors {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: left;
-    background-color: white;
+    background-color: transparent;
     height: auto;
     justify-content: space-between;
     margin-top: 50px;
@@ -41,7 +47,7 @@
     display: flex;
     align-items: flex-end;
     margin: 0px;
-    background-color: #ffffff;
+    background-color: transparent;
     }
 
   .professions a {
@@ -53,12 +59,13 @@
   .professions {
     flex: 1;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
+    column-count: 2;
+    column-gap: 20px;
     align-items: left;
     background-color: #ffffff;
-    max-height: 200px;
     justify-content: space-between;
-    max-height: 150px;
+    max-height: auto;
   }
 
   .role {
@@ -79,7 +86,7 @@
   h4 {
     color: #1A5364;
     margin: 0px;
-    font-size: 24px;
+    font-size: 8px;
     font-weight: 300;
   }
 
@@ -89,8 +96,8 @@
   }
 
   .icon {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     float: left;
     border-radius: 20%;
     margin-right: 10px;
@@ -126,38 +133,42 @@
 </style>
 </head>
 
-<body>
+<body data-rsssl=1 data-rsssl=1>
   <div class="container">
     <div class="menu">
-    <div class="subnav-title"><h3>Our Expertise</h3></div>
-    <div class="sectors">
-        <div class="sector" id="line1">
-          <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
-          <h4>Allied Health</h4>
+      <div class="expertise-container">
+        <div class="subnav-title"><h3>Our Expertise</h3></div>
+        <div class="sectors">
+            <div class="sector" id="line1">
+              <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
+              <h4>Allied Health</h4>
+            </div>
+            <div class="sector" id="line2">
+              <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
+              <h4>Nursing</h4>
+            </div>
+            <div class="sector" id="line3">
+              <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
+              <h4>Social work</h4>
+            </div>
         </div>
-        <div class="sector" id="line2">
-          <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
-          <h4>Nursing</h4>
-        </div>
-        <div class="sector" id="line3">
-          <img src="https://dev.halt.agency/wp-content/uploads/2024/04/Untitled-6.jpg" class="icon" alt="Allied Health">
-          <h4>Social work</h4>
-        </div>
-    </div>
-    <div class="subnav-title"><h3>Our Specialisms</h3></div>
-    <div class="prof-container">
-      <div class="professions" id="specialisations">
-          <div class="role"><p><a href="#">Specialisation 1</a></p></div>
-          <div class="role"><p><a href="#">Specialisation 2</a></p></div>
-          <div class="role"><p><a href="#">Specialisation 3</a></p></div>
-          <div class="role"><p><a href="#">Specialisation 4</a></p></div>
-          <div class="role"><p><a href="#">Specialisation 5</a></p></div>
-          <div class="role"><p><a href="#">Specialisation 6</a></p></div>
       </div>
-      <button><a href="#" class="btn-2">View All</a></button>
+      <div class="specialism-container">
+        <div class="subnav-title"><h3>Our Specialisms</h3></div>
+          <div class="prof-container">
+            <div class="professions" id="specialisations">
+                <div class="role"><p><a href="#">Specialisation 1</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 2</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 3</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 4</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 5</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 6</a></p></div>
+            </div>
+            <button><a href="#" class="btn-2">View All</a></button>
+          </div>
+      </div>
     </div>
   </div>
-</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     // Add event listeners to each line of text
@@ -168,27 +179,27 @@
       // Change the content of the last three columns based on which line is hovered over
       if (this.id === "line1") {
         $("#specialisations").html(
-          "<div class='role'><p><a href='#'>specialisation 1</a></p></div>" +
-          "<div class='role'><p><a href='#'>specialisation 2</a></p></div>" +
-          "<div class='role'><p><a href='#'>specialisation 3</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 1</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 2</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 3</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 4</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 5</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 6</a></p></div>"
         );
       } else if (this.id === "line2") {
         $("#specialisations").html(
-          "<div class='role'><p><a href='#'>specialisation 11</a></p></div>" +
-          "<div class='role'><p><a href='#'>specialisation 12</a></p></div>" +
-          "<div class='role'><p><a href='#'>specialisation 13</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 11</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 12</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 13</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 14</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 15</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 16</a></p></div>"
         );
       } else if (this.id === "line3") {
         $("#specialisations").html(
-          "<div class='role'><p><a href='#'>specialisation 21</a></p></div>" +
-          "<div class='role'><p><a href='#'>specialisation 22</a></p></div>" +
-          "<div class='role'><p><a href='#'>specialisation 23</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 21</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 22</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 23</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 24</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 25</a></p></div>" +
           "<div class='role'><p><a href='#'>Specialisation 26</a></p></div>"

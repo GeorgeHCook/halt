@@ -10,6 +10,7 @@
     margin: 5%;
     font-family: 'Onest', sans-serif;
 		max-width: 100%;
+    max-height: 80%;
   }
 
   .subnav-title {
@@ -41,11 +42,13 @@
     display: flex;
     align-items: center;
     align-content: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .prof-container {
     display: flex;
-    align-items: flex-end;
+    align-items: end;
     margin: 0px;
     background-color: transparent;
     }
@@ -59,13 +62,12 @@
   .professions {
     flex: 1;
     display: flex;
-    flex-flow: column;
-    column-count: 2;
-    column-gap: 20px;
+    flex-flow: column wrap;
     align-items: left;
     background-color: #ffffff;
     justify-content: space-between;
-    max-height: auto;
+    max-height: 300px;
+    margin-top: 50px;
   }
 
   .role {
@@ -133,7 +135,7 @@
 </style>
 </head>
 
-<body data-rsssl=1 data-rsssl=1>
+<body data-rsssl=1 data-rsssl=1 data-rsssl=1>
   <div class="container">
     <div class="menu">
       <div class="expertise-container">
@@ -157,12 +159,12 @@
         <div class="subnav-title"><h3>Our Specialisms</h3></div>
           <div class="prof-container">
             <div class="professions" id="specialisations">
-                <div class="role"><p><a href="#">Specialisation 1</a></p></div>
-                <div class="role"><p><a href="#">Specialisation 2</a></p></div>
-                <div class="role"><p><a href="#">Specialisation 3</a></p></div>
-                <div class="role"><p><a href="#">Specialisation 4</a></p></div>
-                <div class="role"><p><a href="#">Specialisation 5</a></p></div>
-                <div class="role"><p><a href="#">Specialisation 6</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 01</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 02</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 03</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 04</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 05</a></p></div>
+                <div class="role"><p><a href="#">Specialisation 06</a></p></div>
             </div>
             <button><a href="#" class="btn-2">View All</a></button>
           </div>
@@ -179,12 +181,12 @@
       // Change the content of the last three columns based on which line is hovered over
       if (this.id === "line1") {
         $("#specialisations").html(
-          "<div class='role'><p><a href='#'>Specialisation 1</a></p></div>" +
-          "<div class='role'><p><a href='#'>Specialisation 2</a></p></div>" +
-          "<div class='role'><p><a href='#'>Specialisation 3</a></p></div>" +
-          "<div class='role'><p><a href='#'>Specialisation 4</a></p></div>" +
-          "<div class='role'><p><a href='#'>Specialisation 5</a></p></div>" +
-          "<div class='role'><p><a href='#'>Specialisation 6</a></p></div>"
+          "<div class='role'><p><a href='#'>Specialisation 01</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 02</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 03</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 04</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 05</a></p></div>" +
+          "<div class='role'><p><a href='#'>Specialisation 06</a></p></div>"
         );
       } else if (this.id === "line2") {
         $("#specialisations").html(
